@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    //Incorrect way to access element by ID
+    document.getElementById('myDiv').innerHTML = "<h1>This will cause a bug in some browsers</h1>";
+    //The correct way to add content dynamically
+    const div = document.getElementById('myDiv');
+    const newH1 = document.createElement('h1');
+    newH1.textContent = 'This is the correct way';
+    div.appendChild(newH1);
+  </script>
+</body>
+</html>

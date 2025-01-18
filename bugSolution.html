@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Correct way to add content dynamically using createElement and appendChild
+    const div = document.getElementById('myDiv');
+    const newH1 = document.createElement('h1');
+    newH1.textContent = 'This is the correct way';
+    div.appendChild(newH1);
+  </script>
+</body>
+</html>
